@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decodificador de texto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="content">
+        <img class="logo" src="assets/images/Top.svg" alt="" />
+      </div>
+    </header>
+    <main class="container">
+      <form class="content" action="">
+        <label for="text-input" hidden>Digite seu texto</label>
+        <textarea
+          name="text-input"
+          placeholder="Digite seu texto"
+          id="text-input"
+          rows="7"
+        ></textarea>
+        <div class="warning content">
+          <img src="assets/images/Vector.svg" alt="" />
+          <p>Apenas letras minúsculas e sem acento.</p>
+        </div>
+        <div class="buttons-section content">
+          <button class="button-blue" id="encrypt-button">Criptografar</button>
+          <button class="button-white" id="decrypt-button">
+            Descriptografar
+          </button>
+        </div>
+      </form>
+
+      <section class="content" id="final-text-section">
+        <p class="title">Nenhuma mensagem encontrada</p>
+        <p class="subtitle">
+          Digite um texto que você deseja criptografar ou descriptografar.
+        </p>
+      </section>
+
+      <!-- <section class="content">
+        <p class="final-text" id="final-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes,
+          sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut
+          laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit.
+          Libero, sodales duis fames id diam feugiat aliquet non egestas.
+        </p>
+        <button class="button-white">Copiar</button>
+      </section> -->
+    </main>
+  </body>
+</html>
