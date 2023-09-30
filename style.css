@@ -140,8 +140,17 @@ main {
     color: white;
   }
 
+  & .button-blue:hover {
+    background-color: var(--dark-blue-400);
+  }
+
   & .button-white {
+    background-color: var(--light-blue-100);
     color: var(--dark-blue-300);
+  }
+
+  & .button-white:hover {
+    background-color: var(--light-blue-200);
   }
 
   & section {
@@ -176,5 +185,13 @@ main {
       width: 100%;
       background-color: white;
     }
+  }
+}
+
+@media (min-width: 600px) {
+  main.container form.content .buttons-section {
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: initial;
   }
 }
