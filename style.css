@@ -35,6 +35,10 @@ img {
   --gray-300: #868e96;
   --gray-400: #495057;
   --gray-500: #343a40;
+
+  /*========== PADDING ===========*/
+  --padding-horizontal: 1.6rem;
+  --gap: 1.6rem;
 }
 
 html {
@@ -57,24 +61,28 @@ body {
 
 /* ======= HEADER ========= */
 header {
-  padding: 2.4rem 1.6rem;
+  padding: 2.4rem var(--padding-horizontal);
 }
 
 /* ======= MAIN ========= */
 main {
-  padding: 0rem 1.6rem 4rem;
+  padding: 6rem var(--padding-horizontal) 4rem;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: var(--gap);
 
-  & form.content {
+  & form {
     flex-direction: column;
-    gap: 1.6rem;
+    gap: var(--gap);
     width: 100%;
+    /* height: 60vh; */
+    flex-grow: 2;
 
     & textarea {
       color: var(--dark-blue-300);
       font-family: 'Inter', sans-serif;
       font-size: 3.2rem;
+      /* height: 100%; */
+      flex-grow: inherit;
 
       display: block;
       resize: none;
@@ -111,6 +119,7 @@ main {
     height: 1.8rem;
     gap: 0.8rem;
     align-items: center;
+    flex-grow: 1;
 
     & img {
       color: var(--gray-500);
@@ -126,6 +135,7 @@ main {
   & .buttons-section {
     flex-direction: column;
     gap: 2.4rem;
+    flex-grow: 1;
   }
 
   & button {
@@ -154,6 +164,8 @@ main {
   }
 
   & section {
+    flex-grow: 1;
+    margin-top: 4.8rem;
     flex-direction: column;
     align-items: center;
     background-color: White;
@@ -189,9 +201,35 @@ main {
 }
 
 @media (min-width: 600px) {
-  main.container form.content .buttons-section {
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: initial;
+  /* ======= GLOBAL VARIABLES ========= */
+  :root {
+    /*========== PADDING ===========*/
+    --padding-horizontal: 4rem;
+  }
+
+  /* ======= HEADER ========= */
+  header {
+    padding: 7.4rem var(--padding-horizontal);
+  }
+
+  /* ======= MAIN ========= */
+
+  main.container {
+    padding-top: 11.6rem;
+
+    & form.content {
+      /* & textarea {
+        height: 63rem;
+      } */
+
+      & .buttons-section {
+        flex-direction: row;
+        justify-content: space-between;
+
+        & button {
+          flex-grow: 1;
+        }
+      }
+    }
   }
 }
