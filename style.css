@@ -198,7 +198,7 @@ main {
   }
 }
 
-@media (min-height: 800px) {
+@media (min-height: 600px) {
   @media (min-width: 600px) {
     /* ======= GLOBAL VARIABLES ========= */
     :root {
