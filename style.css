@@ -74,14 +74,12 @@ main {
     flex-direction: column;
     gap: var(--gap);
     width: 100%;
-    /* height: 60vh; */
     flex-grow: 2;
 
     & textarea {
       color: var(--dark-blue-300);
       font-family: 'Inter', sans-serif;
       font-size: 3.2rem;
-      /* height: 100%; */
       flex-grow: inherit;
 
       display: block;
@@ -200,34 +198,34 @@ main {
   }
 }
 
-@media (min-width: 600px) {
-  /* ======= GLOBAL VARIABLES ========= */
-  :root {
-    /*========== PADDING ===========*/
-    --padding-horizontal: 4rem;
-  }
+@media (min-height: 800px) {
+  @media (min-width: 600px) {
+    /* ======= GLOBAL VARIABLES ========= */
+    :root {
+      /*========== PADDING ===========*/
+      --padding-horizontal: 4rem;
+    }
 
-  /* ======= HEADER ========= */
-  header {
-    padding: 7.4rem var(--padding-horizontal);
-  }
+    /* ======= HEADER ========= */
+    header {
+      padding: 7.4rem var(--padding-horizontal);
+    }
 
-  /* ======= MAIN ========= */
+    /* ======= MAIN ========= */
 
-  main.container {
-    padding-top: 11.6rem;
+    main.container {
+      padding-top: 11.6rem;
 
-    & form.content {
-      /* & textarea {
-        height: 63rem;
-      } */
+      & form.content {
+        height: 55vh;
 
-      & .buttons-section {
-        flex-direction: row;
-        justify-content: space-between;
+        & .buttons-section {
+          flex-direction: row;
+          justify-content: space-between;
 
-        & button {
-          flex-grow: 1;
+          & button {
+            flex-grow: 1;
+          }
         }
       }
     }
