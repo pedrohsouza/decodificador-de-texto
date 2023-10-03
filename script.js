@@ -47,19 +47,21 @@ function appendAnswer(criptographyFunction) {
   const paragraph = document.createElement('p')
   const button = document.createElement('button')
 
-  finalTextSection.innerHTML = ''
+  if (originalText !== '') {
+    finalTextSection.innerHTML = ''
 
-  paragraph.innerHTML = modifiedText
-  paragraph.classList.add('final-text')
-  paragraph.id = 'final-text'
-  finalTextSection.append(paragraph)
+    paragraph.innerHTML = modifiedText
+    paragraph.classList.add('final-text')
+    paragraph.id = 'final-text'
+    finalTextSection.append(paragraph)
 
-  button.addEventListener('click', _ => {
-    copyToClipboard('#final-text')
-  })
-  button.innerHTML = 'Copiar'
-  button.classList.add('button-white')
-  finalTextSection.append(button)
+    button.addEventListener('click', _ => {
+      copyToClipboard('#final-text')
+    })
+    button.innerHTML = 'Copiar'
+    button.classList.add('button-white')
+    finalTextSection.append(button)
+  }
 }
 
 buttonEncrypt.addEventListener('click', event => {

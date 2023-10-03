@@ -81,7 +81,7 @@ main {
       color: var(--dark-blue-300);
       font-family: 'Inter', sans-serif;
       font-size: 3.2rem;
-      flex-grow: inherit;
+      flex-grow: 2;
 
       display: block;
       resize: none;
@@ -252,7 +252,7 @@ footer {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   body {
     max-width: 144rem;
     height: 100vh;
@@ -291,6 +291,8 @@ footer {
     & section.content {
       justify-content: center;
       margin-top: 0;
+      min-width: 35rem;
+      max-width: 40rem;
 
       & img {
         display: block;
@@ -298,5 +300,3 @@ footer {
     }
   }
 }
-
-/* 88 */
